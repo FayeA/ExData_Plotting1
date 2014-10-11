@@ -70,7 +70,8 @@
 ##############################################################
 ## SECTION B - CREATE THE PLOT
 
-   plot(pcData$Time, pcData$Global_active_power, 
+   par=(bg="transparent")
+   plot(pcData$Time, pcData$Global_active_power,
         pch=".",  # set character to a dot so that it would blend in with the line
         ylab="Global Active Power (kilowatts)", # set y label
         xlab="" # remove "Index" in x axis
