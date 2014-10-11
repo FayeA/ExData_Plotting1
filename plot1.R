@@ -70,13 +70,13 @@
 ##############################################################
 ## SECTION B - CREATE THE PLOT
 
+   png("plot2.png", bg="transparent") # open png graphic device. Set background to transparent.
+
    hist(pcData$Global_active_power,
         col = "red", # set colour to red
         main="Global Active Power", # set plot heading
         xlab="Global Active Power (kilowatts)", # set x label
         )
-
-   dev.copy(png, file="plot1.png") # copy plot to png file
    dev.off() # turn off graphic device
 
 
