@@ -70,17 +70,19 @@
 ##############################################################
 ## SECTION B - CREATE THE PLOT
 
-   par=(bg="transparent")
+
+   png("plot2.png", bg="transparent") # open png graphic device. Set background to transparent.
+
    plot(pcData$Time, pcData$Global_active_power,
         pch=".",  # set character to a dot so that it would blend in with the line
         ylab="Global Active Power (kilowatts)", # set y label
-        xlab="" # remove "Index" in x axis
+        xlab="", # remove "Index" in x axis,
+        bg="transparent" # set background colour to transparent
         )
    points(pcData$Global_active_power,col=rgb(1, 1, 1, 1), pch=".", ) # set colour and transparency to "1" so that the "." would not show in the plot
 
    lines(pcData$Time, pcData$Global_active_power) # add lines to the scatter plot so it would look like what's provided in the assignment
 
-   dev.copy(png, file="plot2.png") # copy plot to png file
    dev.off() # turn off graphic device
 
 
